@@ -4,4 +4,5 @@ const numberRouter = require('./app'); // Import your app.js module
 
 app.use('/api', numberRouter);
 
-app.listen(0, () => console.log('Server listening on port 3000'));
+const PORT = 0;
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
