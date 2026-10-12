@@ -4,5 +4,10 @@ const numberRouter = require('./app'); // Import your app.js module
 
 app.use('/api', numberRouter);
 
-const PORT = 0;
-app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
+//const PORT = 0;
+//app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
+
+const server = app.listen(0, () => {
+    const assignedPort = server.address().port;
+    console.log(`Server is running at http://localhost:${assignedPort}`);
+});
